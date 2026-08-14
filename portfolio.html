@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komal Adhikari</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #050816;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Background Glow */
+        
+        body::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: #2563eb;
+            border-radius: 50%;
+            filter: blur(180px);
+            opacity: .25;
+            top: -120px;
+            left: -100px;
+        }
+        
+        body::after {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: #7c3aed;
+            border-radius: 50%;
+            filter: blur(180px);
+            opacity: .25;
+            bottom: -120px;
+            right: -100px;
+        }
+        /* Card */
+        
+        .card {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 60px;
+            width: 90%;
+            max-width: 700px;
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid rgba(255, 255, 255, .1);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+        }
+        
+        h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        
+        .loading {
+            color: #9CA3AF;
+            font-size: 1.2rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+        }
+        
+        .loader {
+            margin: 35px auto;
+            width: 260px;
+            height: 6px;
+            background: rgba(255, 255, 255, .1);
+            border-radius: 50px;
+            overflow: hidden;
+        }
+        
+        .loader span {
+            display: block;
+            height: 100%;
+            width: 40%;
+            background: linear-gradient(90deg, #3b82f6, #06b6d4, #8b5cf6);
+            animation: loading 1.8s infinite;
+            border-radius: 50px;
+        }
+        
+        @keyframes loading {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(350%);
+            }
+        }
+        
+        @keyframes pulse {
+            0%,
+            100% {
+                opacity: .4;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        
+        .footer {
+            margin-top: 30px;
+            color: #6B7280;
+            font-size: .9rem;
+            letter-spacing: 3px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>KOMAL ADHIKARI</h1>
+
+        <div class="loading">
+            WEBSITE IS LOADING...
+        </div>
+
+        <div class="loader">
+            <span></span>
+        </div>
+
+        <div class="footer">
+            COMING SOON
+        </div>
+
+    </div>
+
+</body>
+
+</html>
